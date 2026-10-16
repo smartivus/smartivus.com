@@ -338,12 +338,10 @@ box.addEventListener('click',function(e){var v=e.target.getAttribute('data-conse
  else if(loaded){gtag('consent','update',{analytics_storage:'denied'});}
 });
 var c=get();if(c==='granted')load();else if(c!=='denied')box.hidden=false;
-
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-M4BKVQN3DP');
-
 function ev(name,params){if(loaded)gtag('event',name,params||{})}
 document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
  if(h.indexOf('mailto:')===0)ev('generate_lead',{method:'email',link_location:a.closest('section')?a.closest('section').id||'page':'page'});
